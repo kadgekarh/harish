@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MuscleVerse — Premium Protein & Supplements</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#e53935; /* red */
+      --accent-dark:#b71c1c;
+      --muted:#889099;
+      --bg1:#0f1724;
+      --bg2:#121318;
+      --glass: rgba(255,255,255,0.04);
+    }
+
+    /* Reset */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family:'Poppins',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:#e6eef6;
+      background: linear-gradient(180deg,var(--bg1) 0%, #0b0d10 40%, #070709 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    /* Container */
+    .container{max-width:1200px;margin:0 auto;padding:28px}
+
+    /* Nav */
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff7043);display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Playfair Display';font-size:20px;color:white;box-shadow:0 6px 18px rgba(0,0,0,0.45)}
+    .brand h1{font-family:'Playfair Display';font-size:20px;color:var(--accent);letter-spacing:1px}
+
+    .nav-links{display:flex;gap:18px;align-items:center}
+    .nav-links a{color:#d7e6f8;text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px}
+    .nav-links a:hover{background:var(--glass)}
+
+    .btn{background:var(--accent);color:white;border:none;padding:10px 16px;border-radius:10px;font-weight:700;cursor:pointer;box-shadow:0 8px 20px rgba(229,57,53,0.12)}
+    .btn-secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent);padding:9px 14px;border-radius:10px}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 460px;gap:40px;align-items:center;padding:48px 0}
+    .hero-left h2{font-size:48px;font-family:'Playfair Display';color:var(--accent);line-height:1.02}
+    .hero-left p{margin-top:14px;color:var(--muted);max-width:62ch}
+    .hero-cta{margin-top:20px;display:flex;gap:12px}
+
+    /* Product mock */
+    .mock{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:12px;align-items:center;box-shadow:0 16px 40px rgba(0,0,0,0.5)}
+    .mock img{width:100%;border-radius:12px;object-fit:cover}
+    .price{font-weight:800;color:var(--accent);font-size:20px}
+
+    /* Features */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:48px 0}
+    .feature{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px}
+    .feature h3{font-size:18px;color:#fff;margin-top:8px}
+    .feature p{color:var(--muted);margin-top:8px;font-size:14px}
+
+    /* Product grid */
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:30px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:12px}
+    .card h4{font-size:18px;color:#fff}
+    .card p{color:var(--muted);font-size:14px}
+
+    /* Nutrition table */
+    table{width:100%;border-collapse:collapse;background:transparent;margin-top:12px}
+    th,td{padding:10px;border-bottom:1px dashed rgba(255,255,255,0.04);text-align:left}
+    th{color:var(--muted);font-weight:700}
+
+    /* Testimonials */
+    .testimonials{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:36px 0}
+    .test{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px}
+
+    /* Footer */
+    footer{padding:36px 0;border-top:1px solid rgba(255,255,255,0.03);margin-top:40px}
+    .grid-2{display:flex;gap:20px;flex-wrap:wrap}
+
+    /* Small screens */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .products{grid-template-columns:repeat(2,1fr)}
+      .features{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      .nav-links{display:none}
+      .logo{width:44px;height:44px}
+      .hero-left h2{font-size:32px}
+      .products{grid-template-columns:1fr}
+      .features{grid-template-columns:1fr}
+      .testimonials{grid-template-columns:1fr}
+    }
+
+    /* Micro interactions */
+    .card:hover{transform:translateY(-6px);transition:transform .28s}
+    .feature svg{opacity:.94}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="brand">
+        <div class="logo">MV</div>
+        <div>
+          <h1>MuscleVerse</h1>
+          <div style="font-size:12px;color:var(--muted)">Premium Sports Nutrition</div>
+        </div>
+      </div>
+
+      <div class="nav-links">
+        <a href="#products">Products</a>
+        <a href="#features">Why MV</a>
+        <a href="#nutrition">Nutrition</a>
+        <a href="#reviews">Reviews</a>
+        <button class="btn">Buy Now</button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h2>MuscleVerse — Redefine your strength.<br><span style="font-weight:600;font-size:18px;color:var(--muted);">Science-backed protein, clean ingredients, and performance you can feel.</span></h2>
+
+        <p>From whey isolates to plant-powered blends, MuscleVerse crafts premium supplements for athletes and everyday warriors. Transparent labels, clinically-effective servings and mouth-watering flavors.</p>
+
+        <div class="hero-cta">
+          <button class="btn">Shop Bestsellers</button>
+          <button class="btn-secondary">Subscribe & Save</button>
+        </div>
+
+        <div style="margin-top:20px;display:flex;gap:12px;align-items:center;color:var(--muted);font-size:14px">
+          <strong style="color:var(--accent);font-weight:800">Free shipping</strong>
+          <span>on orders ₹999+</span>
+        </div>
+
+        <!-- Quick highlights -->
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+          <div style="background:rgba(255,255,255,0.02);padding:10px 14px;border-radius:10px;font-size:14px">30g Protein per Serving</div>
+          <div style="background:rgba(255,255,255,0.02);padding:10px 14px;border-radius:10px;font-size:14px">5g BCAAs</div>
+          <div style="background:rgba(255,255,255,0.02);padding:10px 14px;border-radius:10px;font-size:14px">Lab Tested</div>
+        </div>
+      </div>
+
+      <aside class="mock">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="protein jar mockup">
+        <div style="width:100%;display:flex;align-items:center;justify-content:space-between">
+          <div>
+            <div style="font-weight:700">MV Whey Isolate — Chocolate</div>
+            <div style="font-size:13px;color:var(--muted)">907g | 30 servings</div>
+          </div>
+          <div style="text-align:right">
+            <div class="price">₹2,499</div>
+            <div style="font-size:12px;color:var(--muted)">Save 15% with bundle</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+      <div class="feature">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Clinically Effective</h3>
+        <p>Dosages and formulations built on peer-reviewed research so you get results — not placebo.</p>
+      </div>
+
+      <div class="feature">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 2c3 0 5 2 5 5s-2 5-5 5-5-2-5-5 2-5 5-5zM4 22c1-4 6-7 8-7s7 3 8 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Third-Party Tested</h3>
+        <p>Every batch tested for purity, potency and banned substances. Clear lab reports available on product pages.</p>
+      </div>
+
+      <div class="feature">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Clean Flavors</h3>
+        <p>Real cocoa, natural vanilla and no artificial nonsense. Flavors that actually taste like something you want to drink.</p>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products">
+      <h2 style="font-family:'Playfair Display';color:var(--accent);margin-bottom:16px">Featured Products</h2>
+
+      <div class="products">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1600180758890-4d59bfa8d2f6?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="whey" style="width:100%;border-radius:10px;">
+          <h4>Whey Isolate</h4>
+          <p>30g protein • Low carbs • Fast absorption</p>
+          <div style="margin-top:10px;display:flex;justify-content:space-between;align-items:center">
+            <div style="font-weight:800">₹2,499</div>
+            <button class="btn" style="padding:8px 12px">Add</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1605355811234-9c7b1d6b2a5b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="mass gainer" style="width:100%;border-radius:10px;">
+          <h4>Mass Gainer</h4>
+          <p>High-calorie blend • Balanced carbs & fats</p>
+          <div style="margin-top:10px;display:flex;justify-content:space-between;align-items:center">
+            <div style="font-weight:800">₹3,199</div>
+            <button class="btn" style="padding:8px 12px">Add</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1536305030011-45d5f2b01ef0?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="vegan protein" style="width:100%;border-radius:10px;">
+          <h4>Plant Protein</h4>
+          <p>Pea & brown rice • 22g protein • Dairy-free</p>
+          <div style="margin-top:10px;display:flex;justify-content:space-between;align-items:center">
+            <div style="font-weight:800">₹1,899</div>
+            <button class="btn" style="padding:8px 12px">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nutrition facts sample -->
+      <div id="nutrition" style="margin-top:22px;background:rgba(255,255,255,0.02);padding:18px;border-radius:12px">
+        <h3 style="color:#fff">Nutrition — MV Whey Isolate (Per Serving)</h3>
+        <table>
+          <thead>
+            <tr><th>Calories</th><th>Protein</th><th>Carbs</th><th>Fat</th></tr>
