@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MuscleVerse - Products</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #0a0f24, #111a3c, #1b2b63);
+            color: white;
+        }
+
+        header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin-left: 25px;
+            font-weight: 600;
+        }
+
+        .products-section {
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .products-section h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 40px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-card img {
+            width: 200px;
+            border-radius: 12px;
+        }
+
+        .product-card h3 {
+            margin-top: 20px;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .product-card p {
+            color: #d6d9f0;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .buy-btn {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff5f5f;
+            color: white;
+            font-weight: 700;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MuscleVerse</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="products-section">
+        <h1>Our Products</h1>
+
+        <div class="products-grid">
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1597075092489-355a6e7f802f?auto=format&fit=crop&w=600&q=80" alt="Protein" />
+                <h3>MuscleVerse Whey Protein</h3>
+                <p>High-quality whey blend for daily muscle recovery and growth.</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1587241321921-91a9c94f1b1b?auto=format&fit=crop&w=600&q=80" alt="Creatine" />
+                <h3>Creatine Monohydrate</h3>
+                <p>Boost strength, endurance, and overall performance.</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1579722821273-e9a5c05a4f9a?auto=format&fit=crop&w=600&q=80" alt="Mass Gainer" />
+                <h3>Mass Gainer XL</h3>
+                <p>Gain size and power with our high-calorie nutrient formula.</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=600&q=80" alt="BCAA" />
+                <h3>BCAA Pro</h3>
+                <p>Improve endurance and reduce fatigue during intense workouts.</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        © 2025 MuscleVerse. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
